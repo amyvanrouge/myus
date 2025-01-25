@@ -8,7 +8,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  /* agar tidak perlu mengatur dimansi elemen saat kita beri padding/border */
+  /* agar tidak perlu mengatur dimensi elemen saat kita beri padding/border */
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -34,7 +34,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 100;
 }
 
 .navbar .navbar-logo {
@@ -81,7 +81,7 @@ body {
   color: var(--primary);
 }
 
-#hamburger-menu{
+#hamburger-menu {
   display: none;
 }
 
@@ -96,45 +96,43 @@ body {
   #hamburger-menu {
     display: inline-block;
   }
-  
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
+    background-color: var(--bg);
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
   }
-  
+
   .navbar .navbar-nav.active {
     right: 0;
   }
-  
+
   .navbar .navbar-nav a {
-    columns: var(--bg);
+    background-color: var(--bg);
     display: block;
-    margin: 1.5rem;
-    padding: 8.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
     font-size: 2rem;
   }
-  
-  .navbar.navbar-nav a::after {
+
+  .navbar .navbar-nav a::after {
     transform-origin: 0 0;
   }
-  
+
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
-  
 }
 
-/* tablet*/
+/* tablet */
 @media (max-width: 769px) {
   html {
     font-size: 62.5%;
   }
-
 }
 
 /* hp */
@@ -142,6 +140,4 @@ body {
   html {
     font-size: 55%;
   }
-
-  
 }
